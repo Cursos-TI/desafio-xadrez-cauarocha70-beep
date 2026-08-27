@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+int main() {
+    int casasTorre = 5;
+    int casasBispo = 5;
+    int casasRainha = 8;
+    int movimentosCavalo = 1;
+    int casasCavaloBaixo = 2;
+    int casasCavaloEsquerda = 1;
+
+    for (int i = 1; i <= casasTorre; i++) {
+        printf("Direita\n");
+    }
+    printf("\n");
+
+    int contadorBispo = 1;
+    while (contadorBispo <= casasBispo) {
+        printf("Cima\n");
+        printf("Direita\n");
+        contadorBispo++;
+    }
+    printf("\n");
+
+    int contadorRainha = 1;
+    do {
+        printf("Esquerda\n");
+        contadorRainha++;
+    } while (contadorRainha <= casasRainha);
+    printf("\n");
+
+    for (int movimento = 1; movimento <= movimentosCavalo; movimento++) {
+        int passoBaixo = 1;
+        while (passoBaixo <= casasCavaloBaixo) {
+            printf("Baixo\n");
+            passoBaixo++;
+        }
+
+        int passoEsquerda = 1;
+        do {
+            printf("Esquerda\n");
+            passoEsquerda++;
+        } while (passoEsquerda <= casasCavaloEsquerda);
+    }
+
+    return 0;
+}
